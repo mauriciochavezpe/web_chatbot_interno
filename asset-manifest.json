@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mauriciochavezpe/web_chatbot_interno/static/css/main.073c9b0a.css",
+    "main.js": "/mauriciochavezpe/web_chatbot_interno/static/js/main.c72706d7.js",
+    "static/js/787.5c21601c.chunk.js": "/mauriciochavezpe/web_chatbot_interno/static/js/787.5c21601c.chunk.js",
+    "static/media/logo.svg": "/mauriciochavezpe/web_chatbot_interno/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/mauriciochavezpe/web_chatbot_interno/index.html",
+    "main.073c9b0a.css.map": "/mauriciochavezpe/web_chatbot_interno/static/css/main.073c9b0a.css.map",
+    "main.c72706d7.js.map": "/mauriciochavezpe/web_chatbot_interno/static/js/main.c72706d7.js.map",
+    "787.5c21601c.chunk.js.map": "/mauriciochavezpe/web_chatbot_interno/static/js/787.5c21601c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.c72706d7.js"
+  ]
+}
