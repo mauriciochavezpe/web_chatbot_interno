@@ -25,26 +25,46 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+
+    <script >
+
+      var username = "";
+      fetch('https://jsonplaceholder.typicode.com/comments/1')
+      .then(response => response.json())
+      .then(json =>  {
+        console.log(json);
+        username = json.email
+      })
+
+      window.webchatMethods = {
+        // called at each user message
+        getMemory: (conversationId) => {
+          const memory = { userName: username }
+          return { memory, merge: true }
+        }
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script>
 
       
-      function embedChatbot() {
-        var scriptTag = document.createElement('script');
+      // function embedChatbot() {
+      //   var scriptTag = document.createElement('script');
         
-        // If the 'SAP CAI Web Client' channel is chosen
-        scriptTag.setAttribute("id", "cai-webchat");
-        scriptTag.setAttribute("src", "https://cdn.cai.tools.sap/webchat/webchat.js");
-        // If the 'Webchat' channel is chosen
-        document.body.appendChild(scriptTag);
-        scriptTag.setAttribute("channelId", "a3a98165-0e96-4043-8a28-0461839aecaa");
-        scriptTag.setAttribute("token", "4f74ccb4ccb30f220e19546726f48f19");
-      }
+      //   // If the 'SAP CAI Web Client' channel is chosen
+      //   scriptTag.setAttribute("id", "cai-webchat");
+      //   scriptTag.setAttribute("src", "https://cdn.cai.tools.sap/webchat/webchat.js");
+      //   // If the 'Webchat' channel is chosen
+      //   document.body.appendChild(scriptTag);
+      //   scriptTag.setAttribute("channelId", "a3a98165-0e96-4043-8a28-0461839aecaa");
+      //   scriptTag.setAttribute("token", "4f74ccb4ccb30f220e19546726f48f19");
+      // }
       
-      embedChatbot();
+      // embedChatbot();
       </script>
+
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -58,6 +78,12 @@
     -->
 
 
- 
+  <body>
+    <script src="https://cdn.cai.tools.sap/webchat/webchat.js"
+      channelId="a3a98165-0e96-4043-8a28-0461839aecaa"
+      token="4f74ccb4ccb30f220e19546726f48f19"
+      id="cai-webchat"
+    ></script>
+  </body>
   </body>
 </html>
